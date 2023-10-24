@@ -1,0 +1,311 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 400 18px 'lucida', sans-serif;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+.icon {
+    border-radius: 1px;
+    color: #fff;
+  }
+
+.logo span {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-weight: 300;
+}
+
+input {
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 8px 15px;
+    width: 500px;
+}
+
+#-icon img {
+    width: 50px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#header,
+#main {
+    margin: 0 100px;
+}
+
+#-icon {
+    cursor: pointer;
+    display: flex;
+    align-items: baseline;
+}
+
+.produto-linha {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    margin: 15px 0;
+}
+
+
+.produtos {
+    width: 90vw;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #e8e8e863;
+    border: 3px solid black;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 140px;
+}
+
+.produto img {
+    width: 150px;
+}
+
+.produto button {
+    background-color: rgb(0, 0, 0);
+    padding: 5px 8px;
+    border-radius: 10px;
+    color: white;
+}
+
+.cart{
+    fill: #fff;
+}
+
+
+.carrinhoBotao {
+    width: 250px;
+    height: 50px;
+    color: #fff;
+    border-radius: 12px;
+    margin: 10px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+  }
+  
+
+  .iconeContainer {
+    position: absolute;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    color: #fff;
+    transition-duration: .5s;
+  }
+  
+  
+  .text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.04em;
+    font-weight: 600;
+  }
+  
+  .carrinhoBotao:hover .iconeContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    color: #fff;
+    transition-duration: .5s;
+  }
+  
+  .carrinhoBotao:hover .text {
+    transform: translate(10px,0px);
+    transition-duration: .5s;
+  }
+  
+  .carrinhoBotao:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+  }
+
+  .btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+  }
+  
+  .btn-cart::after {
+    content: attr(data-quantity);
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s linear;
+    top: 115%;
+  }
+  
+  .icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+  }
+  
+  .icon-cart path {
+    fill: rgb(0, 0, 0);
+    transition: .2s linear;
+  }
+  
+  .btn-cart:hover > .icon-cart {
+    transform: scale(1.2);
+  }
+  
+  .btn-cart:hover > .icon-cart path {
+    fill: rgb(128, 128, 128);
+  }
+  
+  .btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  
+  .quantity {
+    display: none;
+  }
+
+  #lixeira {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding: 10px;
+    border: 0px solid transparent;
+    outline: 2px solid #000000;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 1.0em;
+    transition: all 0.8s linear;
+   }
+   
+   #lixeira:hover {
+    box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+     8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+     17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+     36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+     99px 72px 143px rgba(0, 0, 0, 0.08);
+     padding: 12px 50px;
+   }
+   
+   .lixeira {
+    position: relative;
+    display: inline-block;
+   }
+   
+   .lixeira .lixeiratext {
+    visibility: hidden;
+    width: 4em;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 110%;
+   }
+   
+   
+   .lixeira:hover .lixeiratext {
+    visibility: visible;
+   }
+  
+
+   .buscarBotao {
+    padding: 10px 20px;
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    align-items: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #000000;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #000000;
+  }
+  
+  .buscarBotao:hover {
+    color: #ffffff;
+    background-color: #000000;
+    transform: scale(1.1);
+    outline: 2px solid #000000;
+    box-shadow: 4px 5px 17px -4px #000000;
+  }
+
+  .preco{
+    font-weight: 1000;
+  }
+  
